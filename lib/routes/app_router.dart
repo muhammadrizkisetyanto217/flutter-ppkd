@@ -27,5 +27,25 @@ final GoRouter appRouter = GoRouter(
       path: '/home',
       builder: (context, state) => HomePage(),
     ),
+    GoRoute(
+      path: '/learn',
+      builder: (context, state) => LearnPage(),
+    ),
+    GoRoute(
+      path: '/search',
+      builder: (context, state) => SearchPage(),
+    ),
+    GoRoute(
+      path: '/other',
+      builder: (context, state) => OtherPage(),
+    ),
+    GoRoute(
+      path: '/stats',
+      builder: (context, state) => StatsPage(),
+    ),
+    GoRoute(
+      path: '/quiz',
+      builder: (context, state) => QuizPage(),
+    ),
   ],
 );

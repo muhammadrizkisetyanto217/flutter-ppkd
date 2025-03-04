@@ -4,42 +4,67 @@ import 'package:flutter_ppkd/project/home/homepage/setup_homepage.dart';
 import 'package:flutter_ppkd/project/home/kotak.dart';
 import 'package:flutter_ppkd/project/home/login-register/welcome.dart';
 import 'package:flutter_ppkd/routes/app_router.dart';
+import 'package:provider/provider.dart';
+import 'providers/theme_provider.dart';
+
+// import 'package:flutter_ppkd/providers/theme_provider.dart';
+// import 'package:flutter_ppkd/router/app_router.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        fontFamily: 'JakartaSans',
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+    final themeProvider = Provider.of<ThemeProvider>(context);
 
-      routerConfig: appRouter,
-      // home: const MyHomePage(title: 'Flutter Demo'),
+    return Container(
+      color: themeProvider.themeMode == ThemeMode.light
+          ? Colors.white
+          : Colors.black,
+      child: Padding(
+        // Tambahkan padding di sini
+        padding: EdgeInsets.all(16),
+        child: MaterialApp.router(
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            brightness: Brightness.light,
+            fontFamily: 'JakartaSans',
+            scaffoldBackgroundColor: Colors.white,
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.white, // Warna utama saat Light Mode
+              brightness: Brightness.light,
+            ),
+            // useMaterial3: false,
+          ),
+          darkTheme: ThemeData(
+            brightness: Brightness.dark,
+            scaffoldBackgroundColor: Colors.black,
+            // useMaterial3: false,
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.black, // Warna utama saat Dark Mode
+              brightness: Brightness.dark,
+            ),
+          ), // Tema gelap
+          themeMode: themeProvider.themeMode, // Gunakan tema dari provider
+          routerConfig: appRouter,
+          debugShowCheckedModeBanner: false,
+        ),
+      ),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
 
   final String title;
 

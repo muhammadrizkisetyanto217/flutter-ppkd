@@ -13,40 +13,37 @@ class BeforeRegisterPage extends StatelessWidget {
       // appBar: AppBar(
       //   title: const Text("Before Login tes"),
       // ),
-      body: Padding(
-        padding: const EdgeInsets.all(24.0), // Add top padding,
-        child: Column(
-          children: [
-            const Spacer(),
-            Image.asset(
-              'assets/images/Before-Login-Register.png',
+      body: Column(
+        children: [
+          const Spacer(),
+          Image.asset(
+            'assets/images/Before-Login-Register.png',
+          ),
+          SizedBox(height: 32),
+          const Spacer(),
+          const Text(
+            'Terdapat dua pilihan pendaftaran',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.w600,
+              color: Color(0xff0E592C),
             ),
-            SizedBox(height: 32),
-            const Spacer(),
-            const Text(
-              'Terdapat dua pilihan pendaftaran',
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w600,
-                color: Color(0xff0E592C),
-              ),
-            ),
-            const Spacer(),
-            AppButton(
-                text: 'Daftar dengan Email',
-                onPressed: () {
-                  context.go('/register');
-                },
-                type: ButtonType.primary),
-            const SizedBox(height: 16),
-            AppButton(
-                text: 'Daftar dengan google',
-                onPressed: () {
-                  // context.go();
-                },
-                type: ButtonType.secondary),
-          ],
-        ),
+          ),
+          const Spacer(),
+          AppButton(
+              text: 'Daftar dengan Email',
+              onPressed: () {
+                context.go('/register');
+              },
+              type: ButtonType.primary),
+          const SizedBox(height: 16),
+          AppButton(
+              text: 'Daftar dengan google',
+              onPressed: () {
+                // context.go();
+              },
+              type: ButtonType.secondary),
+        ],
       ),
     );
   }

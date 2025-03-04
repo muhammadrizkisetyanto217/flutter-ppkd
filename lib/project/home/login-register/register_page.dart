@@ -37,104 +37,97 @@ class RegisterPage extends StatelessWidget {
           ],
         ),
       ),
-      body: Container(
-        color: Colors.white,
-        child: Padding(
-          padding: const EdgeInsets.all(24.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Daftar dengan Email",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xff0E592C),
-                ),
-              ),
-              Text(
-                "Untuk proses lebih lanjut mohon lengkapi data berikut",
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Daftar dengan Email",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Color(0xff0E592C),
+            ),
+          ),
+          Text(
+            "Untuk proses lebih lanjut mohon lengkapi data berikut",
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.black,
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          InputUser(labelText: 'Email', icon: Icons.email),
+          const SizedBox(
+            height: 20,
+          ),
+          InputUser(
+            controller: passwordController,
+            labelText: 'Password',
+            icon: Icons.lock,
+            obscureText: true,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          InputUser(
+            controller: passwordController,
+            labelText: 'Konfirmasi Password',
+            icon: Icons.lock,
+            obscureText: true,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Spacer(),
+          AppButton(
+            text: 'Daftar',
+            onPressed: () {},
+            type: ButtonType.primary,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Center(
+            child: RichText(
+              text: TextSpan(
+                text: 'Sudah punya akun? ',
                 style: TextStyle(
                   fontSize: 16,
-                  color: Colors.black,
+                  color: Colors.black, // Warna teks utama
                 ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              InputUser(labelText: 'Email', icon: Icons.email),
-              const SizedBox(
-                height: 20,
-              ),
-              InputUser(
-                controller: passwordController,
-                labelText: 'Password',
-                icon: Icons.lock,
-                obscureText: true,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              InputUser(
-                controller: passwordController,
-                labelText: 'Konfirmasi Password',
-                icon: Icons.lock,
-                obscureText: true,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const Spacer(),
-              AppButton(
-                text: 'Daftar',
-                onPressed: () {},
-                type: ButtonType.primary,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Center(
-                child: RichText(
-                  text: TextSpan(
-                    text: 'Sudah punya akun? ',
+                children: [
+                  TextSpan(
+                    text: 'Login',
                     style: TextStyle(
                       fontSize: 16,
-                      color: Colors.black, // Warna teks utama
+                      color: Color(0xff0E592C), // Warna biru sesuai permintaan
+                      decoration: TextDecoration.underline, // Garis bawah
                     ),
-                    children: [
-                      TextSpan(
-                        text: 'Login',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color:
-                              Color(0xff0E592C), // Warna biru sesuai permintaan
-                          decoration: TextDecoration.underline, // Garis bawah
-                        ),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            context.push('/login');
-                          },
-                      ),
-                    ],
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        context.push('/login');
+                      },
                   ),
-                ),
+                ],
               ),
-              // const Spacer(),
-              const SizedBox(
-                height: 20,
-              ),
-              // Center(
-              //   child: Text(
-              //     "By creating an account, you agree to EduLearn's Terms & Conditions and Privacy Policy",
-              //     textAlign: TextAlign.center,
-              //   ),
-              // )
-            ],
+            ),
           ),
-        ),
+          // const Spacer(),
+          const SizedBox(
+            height: 20,
+          ),
+          // Center(
+          //   child: Text(
+          //     "By creating an account, you agree to EduLearn's Terms & Conditions and Privacy Policy",
+          //     textAlign: TextAlign.center,
+          //   ),
+          // )
+        ],
       ),
     );
   }

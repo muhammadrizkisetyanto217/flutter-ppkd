@@ -34,7 +34,7 @@ class AppButton extends StatelessWidget {
           backgroundColor: const Color(0xff0E592C),
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(5),
+            borderRadius: BorderRadius.circular(10),
           ),
           textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
         );
@@ -43,7 +43,7 @@ class AppButton extends StatelessWidget {
           backgroundColor: Color(0xffD4EAE1),
           foregroundColor: Color(0xff0E592C),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(5),
+            borderRadius: BorderRadius.circular(10),
           ),
           textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
         );
@@ -53,7 +53,7 @@ class AppButton extends StatelessWidget {
           foregroundColor: const Color(0xff0E592C),
           side: const BorderSide(color: Color(0xff0E592C)),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(5),
+            borderRadius: BorderRadius.circular(10),
           ),
           textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
         );

@@ -11,4 +11,5 @@ export '../project/home/login-register/register_page.dart';
 export '../project/home/login-register/before_login_register_page.dart';
 export '../project/home/login-register/before_register_page.dart';
 export '../project/home/login-register/forget_password_email_page.dart';
+export '../project/home/homepage/quiz/quizzes.dart';
 // Tambahkan semua screen di sini

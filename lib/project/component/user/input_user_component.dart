@@ -37,6 +37,7 @@ class InputUserState extends State<InputUser> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
+      height: 50,
       child: TextField(
         obscureText: isObscured,
         controller: widget.controller,
