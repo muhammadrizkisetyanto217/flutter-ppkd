@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         // Tambahkan padding di sini
         padding: EdgeInsets.all(16),
         child: MaterialApp.router(
-          title: 'Flutter Demo',
+          title: 'Flutter Project MS',
           theme: ThemeData(
             brightness: Brightness.light,
             fontFamily: 'JakartaSans',
