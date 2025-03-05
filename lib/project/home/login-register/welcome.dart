@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ppkd/project/component/main/appbar.dart';
 import 'package:flutter_ppkd/project/component/main/buttons.dart';
-import 'package:flutter_ppkd/providers/theme_provider.dart';
+import 'package:flutter_ppkd/project/component/main/fontsize.dart';
 import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
 // import 'package:flutter_ppkd/project/home/login-register/before_login_register_page.dart';
 // import 'package:flutter_ppkd/project/home/login-register/login_page.dart';
 // import 'package:go_router/go_router.dart';
@@ -37,14 +36,7 @@ class _WelcomePageState extends State<WelcomePage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Mulai Perjalanan Menuntut Ilmu',
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.w600,
-                      color: Color(0xff0E592C),
-                    ),
-                  ),
+                  CustomText22(text: 'Mulai Perjalanan Menuntut Ilmu'),
                   const SizedBox(height: 16),
                   const Text(
                     'Komitmen kami memudahkan kaum muslimin untuk belajar agama dan bahasa Arab dimanapun.',

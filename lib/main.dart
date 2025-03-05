@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ppkd/page/profile.dart';
 import 'package:flutter_ppkd/project/home/homepage/setup_homepage.dart';
 import 'package:flutter_ppkd/project/home/kotak.dart';
 import 'package:flutter_ppkd/project/home/login-register/welcome.dart';
@@ -269,15 +268,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: const Text('Home Page'),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MyProfile()),
-                  );
-                },
-                child: const Text('Go to Profile Page'),
-              ),
+              // ElevatedButton(
+              //   onPressed: () {
+              //     Navigator.push(
+              //       context,
+              //       MaterialPageRoute(builder: (context) => const MyProfile()),
+              //     );
+              //   },
+              //   child: const Text('Go to Profile Page'),
+              // ),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(

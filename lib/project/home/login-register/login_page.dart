@@ -34,13 +34,14 @@ class _LoginPageState extends State<LoginPage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Ahlan wa Sahlan  2!",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Color(0xFF0961F5),
-            ),
+          const SizedBox(
+            height: 16,
+          ),
+          Text22(
+            name: "Ahlan wa sahlan",
+          ),
+          const SizedBox(
+            height: 16,
           ),
           Text(
             "Alhamdulillah bisa bertemu kembali, Login untuk melanjutkan pembelajaran",
@@ -78,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Text(
                 'Lupa Password?',
                 style: TextStyle(
-                  color: Color(0xFF0961F5),
+                  color: Color(0xff0E592C),
                   fontSize: 16,
                 ),
               ),
@@ -129,7 +130,7 @@ class _LoginPageState extends State<LoginPage> {
               style: ElevatedButton.styleFrom(
                 backgroundColor:
                     Color.fromARGB(255, 245, 245, 245), // Warna tombol
-                foregroundColor: Color(0xFF0961F5), // Warna teks
+                foregroundColor: Color(0xff0E592C), // Warna teks
                 shape: RoundedRectangleBorder(
                   borderRadius:
                       BorderRadius.circular(10), // Border radius tombol
@@ -164,7 +165,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(
                       fontSize: 16,
 
-                      color: Color(0xFF0961F5), // Warna biru sesuai permintaan
+                      color: Color(0xff0E592C), // Warna biru sesuai permintaan
                       decoration: TextDecoration.underline, // Garis bawah
                     ),
                     recognizer: TapGestureRecognizer()
@@ -188,6 +189,24 @@ class _LoginPageState extends State<LoginPage> {
             ),
           )
         ],
+      ),
+    );
+  }
+}
+
+class Text22 extends StatelessWidget {
+  const Text22({super.key, required this.name});
+
+  final String name;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      name,
+      style: TextStyle(
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+        color: Color(0xff0E592C),
       ),
     );
   }

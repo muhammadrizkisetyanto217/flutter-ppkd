@@ -1,0 +1,2 @@
+/Users/muhammadrizkisetyanto/Documents/flutter/flutter-ppkd/flutter_ppkd/android/app/.cxx/Debug/533j733z/x86/CMakeFiles/edit_cache.dir
+/Users/muhammadrizkisetyanto/Documents/flutter/flutter-ppkd/flutter_ppkd/android/app/.cxx/Debug/533j733z/x86/CMakeFiles/rebuild_cache.dir
